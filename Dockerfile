@@ -20,9 +20,6 @@ RUN docker-php-ext-install mcrypt
 # Install the PHP pdo_mysql extention
 RUN docker-php-ext-install pdo_mysql
 
-# install opcache and pdo_pgsql
-RUN apt-get install -y libpq-dev && docker-php-ext-install opcache pdo_pgsql
-
 RUN apt-get purge --auto-remove -y zlib1g-dev \
         && apt-get -y install libssl-dev libc-client2007e-dev libkrb5-dev libpq-dev \
         && docker-php-ext-configure imap --with-imap-ssl --with-kerberos \
