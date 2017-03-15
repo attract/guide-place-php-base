@@ -87,7 +87,7 @@ RUN chmod 775 /etc/profile.d/osmosis.sh
 
 # Install Osmosis Mapsforge Map Writer
 RUN wget http://repo.jenkins-ci.org/public/org/mapsforge/mapsforge-map-writer/${MAPSFORGE_VERSION}/mapsforge-map-writer-${MAPSFORGE_VERSION}-jar-with-dependencies.jar
-RUN mv mapsforge-map-writer-release-${MAPSFORGE_VERSION}.jar /osmosis/lib/default/
+RUN mv mapsforge-map-writer-${MAPSFORGE_VERSION}-jar-with-dependencies.jar /osmosis/lib/default/
 
 # Install Python
 RUN apt-get update && apt-get -y install python2.7 python-pip
