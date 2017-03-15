@@ -63,7 +63,7 @@ RUN composer global require "hirak/prestissimo:^0.3"
 
 # Versions
 ENV OSMOSIS_VERSION 0.44.1
-ENV MAPSFORGE_VERSION 0.5.2
+ENV MAPSFORGE_VERSION 0.6.0
 ENV PHYGHTMAP_VERSION 1.74
 
 #
@@ -86,7 +86,7 @@ RUN echo 'export PATH=$PATH:/osmosis/bin' > /etc/profile.d/osmosis.sh
 RUN chmod 775 /etc/profile.d/osmosis.sh
 
 # Install Osmosis Mapsforge Map Writer
-RUN wget http://ci.mapsforge.org/job/${MAPSFORGE_VERSION}/lastSuccessfulBuild/artifact/mapsforge-map-writer/build/libs/mapsforge-map-writer-release-${MAPSFORGE_VERSION}.jar
+RUN wget http://repo.jenkins-ci.org/public/org/mapsforge/mapsforge-map-writer/${MAPSFORGE_VERSION}/mapsforge-map-writer-${MAPSFORGE_VERSION}-jar-with-dependencies.jar
 RUN mv mapsforge-map-writer-release-${MAPSFORGE_VERSION}.jar /osmosis/lib/default/
 
 # Install Python
