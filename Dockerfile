@@ -102,3 +102,8 @@ RUN tar -xzf phyghtmap_${PHYGHTMAP_VERSION}.orig.tar.gz
 RUN cd phyghtmap-${PHYGHTMAP_VERSION} && python setup.py install
 RUN rm phyghtmap_${PHYGHTMAP_VERSION}.orig.tar.gz
 RUN rm -rf phyghtmap-${PHYGHTMAP_VERSION}
+
+
+# install nodejs && npm
+RUN apt-get install -y nodejs-legacy
+RUN apt-get install -y npm
